@@ -2,6 +2,7 @@ package com.example.testapplication2.Miscellaneous;
 
 import static android.content.Context.MODE_PRIVATE;
 import static com.example.testapplication2.MainActivity.queueObject;
+import static com.example.testapplication2.OtherClasses.APIKeys.RapidAPIKey;
 
 import android.content.Context;
 import android.media.AudioAttributes;
@@ -309,7 +310,7 @@ public class GetMetadataForSongThroughAPI {
                 .url("https://shazam.p.rapidapi.com/songs/detect")
                 .post(body)
                 .addHeader("content-type", "text/plain")
-                .addHeader("X-RapidAPI-Key", "0a9efbd43dmsh07c70d10d4d9516p1c9a45jsn30e16045b108")
+                .addHeader("X-RapidAPI-Key", RapidAPIKey)
                 .addHeader("X-RapidAPI-Host", "shazam.p.rapidapi.com")
                 .build();
 
