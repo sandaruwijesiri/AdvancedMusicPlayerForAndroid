@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/ic_exit_to_app_24"
+        android:title="Exit"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/scrollToTop"
+        android:icon="@drawable/ic_arrow_upward_24"
+        android:title="Scroll To Top"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/saveToPlaylist"
+        android:title="Save To Playlist"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/clearQueue"
+        android:title="Clear Queue"
+        android:visible="false"
+        app:showAsAction="never" />
+</menu>

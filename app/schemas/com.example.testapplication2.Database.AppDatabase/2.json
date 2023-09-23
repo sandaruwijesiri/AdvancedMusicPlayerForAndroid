@@ -1,0 +1,204 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "48d3c835f2f879c8d8a2759381f1fd20",
+    "entities": [
+      {
+        "tableName": "SongDetails",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`URI` TEXT NOT NULL, `name` TEXT, `duration` INTEGER NOT NULL, `thumbnailArray` BLOB, `loudnessIndex` REAL NOT NULL, `lastModifiedTime` INTEGER NOT NULL, `lyrics` TEXT, `monthHalf0` REAL NOT NULL, `monthHalf1` REAL NOT NULL, `monthHalf2` REAL NOT NULL, `monthHalf3` REAL NOT NULL, `monthHalf4` REAL NOT NULL, `monthHalf5` REAL NOT NULL, `monthHalf6` REAL NOT NULL, `monthHalf7` REAL NOT NULL, `monthHalf8` REAL NOT NULL, `monthHalf9` REAL NOT NULL, `monthHalf10` REAL NOT NULL, `monthHalf11` REAL NOT NULL, `subBass` REAL NOT NULL, `bass` REAL NOT NULL, `lowerMidrange` REAL NOT NULL, `midrange` REAL NOT NULL, `higherMidrange` REAL NOT NULL, `presence` REAL NOT NULL, `brilliance` REAL NOT NULL, PRIMARY KEY(`URI`))",
+        "fields": [
+          {
+            "fieldPath": "uri",
+            "columnName": "URI",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "duration",
+            "columnName": "duration",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thumbnailArray",
+            "columnName": "thumbnailArray",
+            "affinity": "BLOB",
+            "notNull": false
+          },
+          {
+            "fieldPath": "loudnessIndex",
+            "columnName": "loudnessIndex",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastModified",
+            "columnName": "lastModifiedTime",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lyrics",
+            "columnName": "lyrics",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "monthHalf0",
+            "columnName": "monthHalf0",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf1",
+            "columnName": "monthHalf1",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf2",
+            "columnName": "monthHalf2",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf3",
+            "columnName": "monthHalf3",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf4",
+            "columnName": "monthHalf4",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf5",
+            "columnName": "monthHalf5",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf6",
+            "columnName": "monthHalf6",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf7",
+            "columnName": "monthHalf7",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf8",
+            "columnName": "monthHalf8",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf9",
+            "columnName": "monthHalf9",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf10",
+            "columnName": "monthHalf10",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "monthHalf11",
+            "columnName": "monthHalf11",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subBass",
+            "columnName": "subBass",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bass",
+            "columnName": "bass",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lowerMidrange",
+            "columnName": "lowerMidrange",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "midrange",
+            "columnName": "midrange",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "higherMidrange",
+            "columnName": "higherMidrange",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "presence",
+            "columnName": "presence",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brilliance",
+            "columnName": "brilliance",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "URI"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CurrentMonthAndHalf",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`MonthAndHalf` TEXT NOT NULL, PRIMARY KEY(`MonthAndHalf`))",
+        "fields": [
+          {
+            "fieldPath": "monthAndHalf",
+            "columnName": "MonthAndHalf",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "MonthAndHalf"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '48d3c835f2f879c8d8a2759381f1fd20')"
+    ]
+  }
+}

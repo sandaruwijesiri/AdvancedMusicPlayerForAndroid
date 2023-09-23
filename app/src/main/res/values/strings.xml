@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">VibeWaves</string>
+    <string name="title_home">Home</string>
+    <string name="title_songs">Songs</string>
+    <string name="title_playlists">Playlists</string>
+    <string name="title_queue">Queue</string>
+    <string name="title_more">More</string>
+    <string name="WhatTheServiceDoes">Plays music. Stopping this service may cause the app to fail.</string>
+    <string-array name="sort_by_what_array">
+        <item>Name</item>
+        <item>Duration</item>
+        <item>Date Added</item>
+        <item>Your Favourites</item>
+    </string-array>
+    <string-array name="sort_by_mode_array">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+</resources>

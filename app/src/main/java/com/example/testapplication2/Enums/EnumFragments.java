@@ -1,0 +1,13 @@
+package com.example.testapplication2.Enums;
+
+public enum EnumFragments {
+    HOME_FRAGMENT,
+    PLAYLISTS_FRAGMENT,
+    QUEUE_FRAGMENT,
+    SONGS_FRAGMENT,
+    ARTISTS_FRAGMENT,
+    SETTINGS_FRAGMENT,
+    MORE_FRAGMENT,
+    SPECIFIC_PLAYLIST_FRAGMENT,
+    NOW_PLAYING_FRAGMENT
+}

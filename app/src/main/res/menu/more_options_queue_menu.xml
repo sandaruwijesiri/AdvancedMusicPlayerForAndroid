@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/PlayNextQueue"
+        android:title="Play next"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/AddToQueueQueue"
+        android:title="Add to end of queue"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/StopAfterThisQueue"
+        android:title="Toggle stop after this"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/RemoveFromQueue"
+        android:title="Remove"
+        app:showAsAction="never" />
+</menu>

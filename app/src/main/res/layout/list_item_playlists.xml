@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <view
+        android:id="@+id/playlistItemCanvas"
+        class="com.example.testapplication2.Miscellaneous.PlaylistItemCanvas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/playlistImageCardView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="#00000000"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/playlistImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            app:srcCompat="@drawable/ic_launcher_foreground_custom"
+            tools:srcCompat="@drawable/ic_launcher_foreground_custom" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/playlistName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Playlist Name"
+        android:textColor="@color/primary_text_color"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/playlistImageCardView"
+        app:layout_constraintStart_toStartOf="@id/playlistImageCardView"
+        app:layout_constraintTop_toBottomOf="@id/playlistImageCardView" />
+
+    <TextView
+        android:id="@+id/playlistNoOfTracks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="    no. of Tracks"
+        android:textColor="@color/secondary_text_color"
+        app:layout_constraintEnd_toEndOf="@id/playlistImageCardView"
+        app:layout_constraintStart_toStartOf="@id/playlistImageCardView"
+        app:layout_constraintTop_toBottomOf="@id/playlistName" />
+
+    <TextView
+        android:id="@+id/playlistDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:singleLine="true"
+        android:textColor="@color/secondary_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/playlistImageCardView"
+        app:layout_constraintStart_toStartOf="@id/playlistImageCardView"
+        app:layout_constraintTop_toBottomOf="@id/playlistNoOfTracks" />
+
+    <ImageView
+        android:id="@+id/playlistMoreOptions"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00000000"
+        android:padding="7dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/playlistDuration"
+        app:layout_constraintEnd_toEndOf="@id/playlistImageCardView"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@id/playlistNoOfTracks"
+        app:layout_constraintTop_toTopOf="@id/playlistNoOfTracks"
+        app:srcCompat="@drawable/ic_more_vert_24"
+        tools:srcCompat="@drawable/ic_more_vert_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
