@@ -42,7 +42,6 @@ android {
 }
 
 dependencies {
-    implementation files('libs/TarsosDSP-Android-latest.jar')
     implementation files('D:\\Java\\Jar Files\\okhttp\\okhttp-3.9.0.jar')
     implementation files('D:\\Java\\Jar Files\\okhttp\\okio-1.13.0.jar')
     def room_version = "2.4.2"

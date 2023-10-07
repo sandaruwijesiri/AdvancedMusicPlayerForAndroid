@@ -56,17 +56,6 @@ public class songsFragmentRecyclerViewAdapter extends RecyclerView.Adapter<songs
     ConstraintLayout constraintLayout;
     StringBuilder stringBuilder;
 
-   /* public native short[] helloWorrrrd(String path);
-
-    static {
-        System.loadLibrary("nativemodule");
-    }*/
-    public native String helloWorld(String str);
-    public native short decode(short[] shorts);
-
-    static {
-        System.loadLibrary("nativemodule");
-    }
     public songsFragmentRecyclerViewAdapter(Context mcontext,ConstraintLayout constraintLayout, ArrayList<SongItem> msongsRecyclerViewAdapterAllSongs, ArrayList<SongItem> msongsRecyclerViewAdapterAllSongsParent, MainActivity mmainActivity){
         this.songsRecyclerViewAdapterAllSongs = msongsRecyclerViewAdapterAllSongs;
         this.songsRecyclerViewAdapterAllSongsParent = msongsRecyclerViewAdapterAllSongsParent;
